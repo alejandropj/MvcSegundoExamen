@@ -9,12 +9,14 @@
 <h1>Lista de Eventos</h1>
 
 <form method="post">
+    <label>Selecciona una categoria para filtrar: </label>
     <select name="categoria" class="form-select">
         @foreach(CategoriaEvento cat in categorias)
         {
             <option value="@cat.IdCategoria">@cat.Nombre</option>
         }
     </select>
+    <button class="btn btn-dark">Enviar</button>
 </form>
 
 @if (Model != null)

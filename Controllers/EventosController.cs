@@ -22,7 +22,7 @@ namespace MvcSegundoExamen.Controllers
         public async Task<IActionResult> Index(int categoria)
         {
             List<CategoriaEvento> categorias = await this.service.GetCategoriasAsync();
-            ViewData["EVENTOS"] = categorias;
+            ViewData["CATEGORIAS"] = categorias;
             List<Evento> eventos = await this.service.FindEventosByCatAsync(categoria);
             return View(eventos);
         }

@@ -37,19 +37,19 @@ namespace MvcSegundoExamen.Services
 
         public async Task<List<Evento>> GetEventosAsync()
         {
-            string request = "api/eventos";
+            string request = "/eventos";
             List<Evento> data = await this.CallApiAsync<List<Evento>>(request);
             return data;
         }        
         public async Task<List<CategoriaEvento>> GetCategoriasAsync()
         {
-            string request = "api/categorias";
+            string request = "/categorias";
             List<CategoriaEvento> data = await this.CallApiAsync<List<CategoriaEvento>>(request);
             return data;
         }        
         public async Task<List<Evento>> FindEventosByCatAsync(int idEvento)
         {
-            string request = "api/eventos/"+idEvento;
+            string request = "/eventos/"+idEvento;
             List<Evento> data = await this.CallApiAsync<List<Evento>>(request);
             return data;
         }
