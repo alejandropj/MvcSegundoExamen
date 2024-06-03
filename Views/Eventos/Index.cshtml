@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
+    string UrlBucket = keysModel.BucketS3;
     List<CategoriaEvento> categorias = ViewData["CATEGORIAS"] as List<CategoriaEvento>;
 }
 
@@ -55,7 +56,7 @@
                         @Html.DisplayFor(modelItem => item.IdCategoria)
                     </td>
                     <td>
-                        <img src="@Html.DisplayFor(modelItem => item.Imagen)" style="width:150px" />
+                        <img src="@UrlBucket@Html.DisplayFor(modelItem => item.Imagen)" style="width:150px" />
                     </td>
                 </tr>
             }

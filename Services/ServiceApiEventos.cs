@@ -8,9 +8,11 @@ namespace MvcSegundoExamen.Services
         private string UrlApi;
         private MediaTypeWithQualityHeaderValue header;
 
-        public ServiceApiEventos()
+        public ServiceApiEventos(KeysModel keys)
         {
-            this.UrlApi = "";
+            this.UrlApi = keys.UrlApi;
+            this.header = new MediaTypeWithQualityHeaderValue
+                ("application/json");
         }
 
         private async Task<T> CallApiAsync<T>(string request)
